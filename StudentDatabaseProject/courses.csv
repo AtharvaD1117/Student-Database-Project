@@ -1,0 +1,11 @@
+course_id,course_name,credits
+MAT101,Mathematics I,4
+PHY101,Physics I,4
+CHE101,Chemistry I,4
+CSE101,Intro to Programming,3
+CSE201,Data Structures,4
+STA201,Statistics,3
+DBS301,Database Systems,3
+ECO101,Microeconomics,3
+ENG101,English Composition,2
+HIS101,World History,2

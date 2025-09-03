@@ -1,0 +1,28 @@
+# Student Database Project
+
+ Overview
+A beginner SQL project to manage student records, courses, enrollments, and grades.  
+Includes sample data and queries for practice.
+
+Files
+- `student_database.sqlite` → ready-to-use SQLite database
+- `student_database.sql` → schema + insert data
+- `*.csv` → raw datasets
+
+How to Use
+1. Install [DB Browser for SQLite](https://sqlitebrowser.org/dl/).
+2. Open `student_database.sqlite`.
+3. Run queries in the **Execute SQL** tab.
+
+Example Queries
+sql
+Show first 10 students
+SELECT * FROM Students LIMIT 10;
+
+-- Average grade per course
+SELECT c.course_name, ROUND(AVG(g.grade),2) AS avg_grade
+FROM Grades g
+JOIN Enrollments e ON g.enrollment_id = e.enrollment_id
+JOIN Courses c ON e.course_id = c.course_id
+GROUP BY c.course_name
+ORDER BY avg_grade DESC;
